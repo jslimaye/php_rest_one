@@ -39,7 +39,7 @@
                 'usr_id' => $userid,
                 'venue' => $venue,
                 'details' => $details,
-                'created_at' => $date_time
+                'event_time' => $date_time
             );
 
             array_push($event_arr['data'],$event_item);

@@ -25,7 +25,8 @@
         //read
         public function read(){
             //set time
-            $time = time();
+            $date = date_create();
+            $ts = date_timestamp_get($date);
 
             //create query
             $query = 'SELECT u.username,
@@ -39,12 +40,12 @@
             ' . $this->table . ' e 
             JOIN 
                 users u ON 
-                e.usr_id = u.usr_id
-            WHERE
-                e.date_time >' . $time . ' 
+                e.usr_id = u.usr_id 
             ORDER BY 
-                e.date_time DESC
-            LIMIT 50';
+                e.date_time
+            WHERE
+                e.date_time >' . $ts . '
+            LIMIT 25';
 
             //PERPARE STMT
             $stmt = $this->conn->prepare($query);
