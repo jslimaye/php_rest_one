@@ -17,7 +17,7 @@
     $petition = new Petition($db);
 
     //Petition query
-    $result = $petition -> read();
+    $result = $petition -> init_read();
 
     //row count
     $num = $result->rowCount();

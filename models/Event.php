@@ -42,9 +42,7 @@
                 users u ON 
                 e.usr_id = u.usr_id 
             ORDER BY 
-                e.date_time
-            WHERE
-                e.date_time >' . $ts . '
+                e.date_time DESC
             LIMIT 25';
 
             //PERPARE STMT
