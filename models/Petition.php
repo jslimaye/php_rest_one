@@ -18,6 +18,7 @@
         public $up_votes;
         public $down_votes;
         public $youtube_url;
+        public $images;
 
         //constructor
         function __construct($db){
@@ -38,7 +39,8 @@
             p.date_time_created,
             p.description, 
             p.title,
-            p.youtube_url
+            p.youtube_url,
+            p.images
             FROM 
             ' . $this->table . ' p 
             JOIN 
@@ -74,15 +76,18 @@
         public function hp_read(){
             //create query
 
-            $query = 'SELECT u.username,
+            $query = 'SELECT u.name,
             p.petition_id as id,
             p.category_id as category_id,
             p.usr_id as userid,
             p.target_date,
             p.target_votes,
+            p.target_authority,
             p.date_time_created,
             p.description, 
-            p.title
+            p.title,
+            p.youtube_url,
+            p.images
             FROM 
             ' . $this->table . ' p 
             JOIN 

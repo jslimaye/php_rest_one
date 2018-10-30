@@ -51,7 +51,8 @@
                 'target_votes' => $target_votes,
                 'target_authority' => $target_authority,
                 'created_at' => $date_time_created,
-                'youtube_link' => $youtube_url
+                'youtube_link' => $youtube_url,
+                'images' => $images
             );
 
             array_push($pet_arr['data'],$pet_item);
