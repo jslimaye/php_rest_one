@@ -13,7 +13,7 @@
         public $title;
         public $date_time;
         public $venue;
-        public $username;
+        public $name;
         public $details;
         
 
@@ -29,7 +29,7 @@
             $ts = date_timestamp_get($date);
 
             //create query
-            $query = 'SELECT u.username,
+            $query = 'SELECT u.name,
             e.event_id as id,
             e.usr_id as userid,
             e.details,

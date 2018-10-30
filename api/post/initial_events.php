@@ -35,7 +35,7 @@
             $event_item = array(
                 'id' => $id,
                 'title' => $title,
-                'username' => $username,
+                'username' => $name,
                 'usr_id' => $userid,
                 'venue' => $venue,
                 'details' => $details,

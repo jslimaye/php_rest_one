@@ -2,7 +2,7 @@
 
     //headers
     header('Access-Control-Allow-Origin:*');
-    header('Content-Type: applicaation/json');
+    header('Content-Type: application/json');
 
     include_once '../../config/Database.php';
     include_once '../../models/Petition.php';
@@ -44,12 +44,14 @@
                 'id' => $id,
                 'title' => $title,
                 'description' => $description,
-                'username' => $username,
+                'name' => $name,
                 'up_votes' => $up_votes,
                 'down_votes' => $down_votes,
                 'target_date' => $target_date,
                 'target_votes' => $target_votes,
-                'created_at' => $date_time_created
+                'target_authority' => $target_authority,
+                'created_at' => $date_time_created,
+                'youtube_link' => $youtube_url
             );
 
             array_push($pet_arr['data'],$pet_item);
